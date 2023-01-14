@@ -15,15 +15,4 @@ public interface DroneService {
     List<Medication> getDroneMedications(String serialNumber);
 
     List<Drone> getAvailableDrones();
-
-
-
-
-//    ResponseBean loadDroneWithMedications(String serialNumber);
-//
-//    ResponseBean checkLoadedMedicationItems(String serialNumber);
-//
-//    ResponseBean checkDroneAvailability();
-//
-//    ResponseBean obtainDroneBatteryLevel(String serialNumber);
 }

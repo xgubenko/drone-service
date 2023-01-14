@@ -45,7 +45,7 @@ public class DroneServiceImpl implements DroneService {
         int weight = medicationList.stream()
                 .reduce(0, (total, current) -> total + current.getWeight(), Integer::sum);
 
-        if(weight > drone.getWeightLimit()) {
+        if (weight > drone.getWeightLimit()) {
             log.error("Medications weight is too high: {}; drone will not be loaded", medicationList);
             throw new DataIntegrityViolationException(
                     String.format("Medications weight should be below drone weight limit: %s", drone.getWeightLimit()));
