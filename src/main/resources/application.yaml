@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: "jdbc:h2:mem:drone"
+    driverClassName: "org.h2.Driver"
+    username: "admin"
+    password: "password"
+  jpa:
+    database-platform: "org.hibernate.dialect.H2Dialect"
+    show-sql: "true"
+    hibernate:
+      ddl-auto: "create"
+  h2:
+    console:
+      enabled: "true"
+      path: "/h2-console"
+      settings:
+        trace: "false"
+        web-allow-others: "false"
