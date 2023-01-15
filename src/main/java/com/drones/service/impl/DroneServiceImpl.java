@@ -64,8 +64,6 @@ public class DroneServiceImpl implements DroneService {
     @Override
     public List<Drone> getAvailableDrones() {
         log.debug("Get drones available for loading");
-        return droneRepository.findAll().stream()
-                .filter(drone -> drone.getMedications().size() == 0)
-                .toList();
+        return droneRepository.findByMedicationsIsNull();
     }
 }
